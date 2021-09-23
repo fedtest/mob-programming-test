@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const API_KEY = "";
+  const API_URL = "http://www.omdbapi.com/?apikey=65049324&s="; // s=star+wars
+
   return (
     <div className="App">
       <header className="App-header">
