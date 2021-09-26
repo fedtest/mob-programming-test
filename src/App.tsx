@@ -15,7 +15,7 @@ function App() {
 
     return (
         <BodyStyled>
-            MOBPROGRAMMERINGS TEST
+            MOBPROGRAMMERINGSTEST
         </BodyStyled>
     );
 }
