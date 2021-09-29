@@ -17,7 +17,7 @@ function App() {
     const [searchTerm, setSearchTerm] = useState("");
 
   const API_KEY = "65049324";
-  const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=star`; // s=star+wars
+  const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`; // s=star+wars
 
   const fetchMovies = async () => {
       try {
