@@ -30,7 +30,11 @@ function App() {
   };
 
   return <BodyStyled>MOBPROGRAMMERINGSTEST
-      {movies.map((movie) => <li><ul></ul></li>)}
+      <ul>
+      {movies.map(({Title, Poster}, key) => <li key={key}>
+          <h2>{Title}</h2>
+      </li>)}
+      </ul>
   </BodyStyled>;
 }
 
