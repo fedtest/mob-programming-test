@@ -14,6 +14,7 @@ function App() {
         fetchMovies()
     })
     const [movies, setMovies] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
 
   const API_KEY = "65049324";
   const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=star`; // s=star+wars
@@ -30,10 +31,15 @@ function App() {
   };
 
   return <BodyStyled>MOBPROGRAMMERINGSTEST
+      <input type="text" placeholder="search movie" onChange={(e) => setSearchTerm(e.target.value)} />
       <ul>
-      {movies.map(({Title, Poster}, key) => <li key={key}>
-          <h2>{Title}</h2>
-      </li>)}
+      {movies.map(({Title, Poster}, key) => (
+        <li key={key}>
+            <h2>{Title}</h2>
+            <img src={Poster} alt="Poster" />
+        </li>
+        )
+      )}
       </ul>
   </BodyStyled>;
 }
