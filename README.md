@@ -28,6 +28,7 @@ alias next='git add -A && git commit -m "WIP-MOB" --no-verify && git push --no-v
 - Typescript.
 - styled components.
 
+
 # the goal
 
 Create a simple app that displays a list of movies.
