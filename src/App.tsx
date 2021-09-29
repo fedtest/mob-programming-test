@@ -39,7 +39,7 @@ function App() {
 				onChange={(e) => setSearchTerm(e.target.value)}
 			/>
 			<ul>
-				{movies.map(({ Title, Poster }, key) => (
+				{movies?.map(({ Title, Poster }, key) => (
 					<li key={key}>
 						<h2>{Title}</h2>
 						<img src={Poster} alt='Poster' />
