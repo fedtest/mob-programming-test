@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import './App.css';
 import styled from 'styled-components';
 
+interface response{
+    Search:[]
+}
+
 const BodyStyled = styled.div`
   background-color: mistyrose;
   height: 100%;
@@ -15,13 +19,15 @@ function App() {
   const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`; // s=star+wars
 
   const [search, setSearch] = useState('');
+  const [movieData, setMovieData] = useState<response>();
+
+  console.log(movieData?.Search);
 
   const handleClick = (input: string) => {
-    console.log(input);
 
-    fetch('http://example.com/movies.json')
+    fetch(API_URL+input)
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => setMovieData(data));
   };
 
   return (
